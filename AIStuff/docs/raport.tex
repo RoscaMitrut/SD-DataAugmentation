@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\title{lorem ipsum \\ \large MIRPR Stable Diffusion Project}
+\author{Eduard-Mitrut Rosca, Albert Regus}
+
+\begin{document}
+
+\maketitle
+
+\chapter*{Demo APP Functionalities \& Features}
+
+\section*{Overview}
+The application is a website featuring a canvas (similar to the one provided by \href{https://www.nvidia.com/en-us/studio/canvas/}{NVIDIA Canvas}), where users can paint simple images. The output is a realistic image generated based on the user’s preferences using a Stable Diffusion-based model.
+
+\section*{Functionalities}
+\begin{itemize}
+    \item Paint on a blank canvas using different brush colors and sizes.
+    \item Erase unwanted elements from the canvas.
+    \item Display the generated realistic image output to the user.
+\end{itemize}
+
+\section*{Short Description}
+The system leverages a Stable Diffusion-based model, such as ControlNet, to generate realistic synthetic images. This approach aims to improve the performance of AI models that require large datasets to achieve optimal results by providing an efficient way to generate training data.
+
+\chapter*{Useful Work and Related Work}
+
+\section*{ControlNet}
+Pretrained diffusion models used for image generation.
+\begin{itemize}
+    \item \href{https://github.com/lllyasviel/ControlNet}{https://github.com/lllyasviel/ControlNet}
+    \item \href{https://arxiv.org/pdf/2302.05543}{https://arxiv.org/pdf/2302.05543}
+\end{itemize}
+
+\section*{UNet (Used for Segmentation)}
+\begin{itemize}
+    \item \href{https://arxiv.org/pdf/1505.04597}{https://arxiv.org/pdf/1505.04597}
+\end{itemize}
+
+\section*{Fréchet Inception Distance (For Metrics)}
+\begin{itemize}
+    \item \href{https://arxiv.org/pdf/1706.08500}{https://arxiv.org/pdf/1706.08500}
+\end{itemize}
+
+\section*{Datasets}
+\begin{itemize}
+    \item \href{https://cs.nyu.edu/~fergus/datasets/nyu_depth_v2.html}{NYU Depth Dataset V2}
+    \item \href{https://cs.nyu.edu/~fergus/datasets/indoor_seg_support.pdf}{Indoor Segmentation Support (ADE20K)}
+\end{itemize}
+
+\section*{Generative Models (StabilityAI)}
+\begin{itemize}
+    \item \href{https://github.com/stability-ai/generative-models}{https://github.com/stability-ai/generative-models}
+\end{itemize}
+
+\section*{Stable Diffusion}
+\begin{itemize}
+    \item \href{https://arxiv.org/pdf/2112.10752}{https://arxiv.org/pdf/2112.10752}
+\end{itemize}
+
+\end{document}
