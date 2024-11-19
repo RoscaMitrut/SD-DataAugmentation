@@ -30,13 +30,14 @@ def process_and_split_files(input_file1, input_file2, output_file1, output_file2
             for entry in entries
         ]
     
-    # Save entries to output files in JSON format
-    def save_json(output_file, data):
+    # Save entries to output files with one JSON object per line
+    def save_minimal_json(output_file, data):
         with open(output_file, 'w') as outfile:
-            json.dump(data, outfile, indent=4)
+            for entry in data:
+                outfile.write(f"{json.dumps(entry)}\n")
     
-    save_json(output_file1, format_entries(train_entries))
-    save_json(output_file2, format_entries(test_entries))
+    save_minimal_json(output_file1, format_entries(train_entries))
+    save_minimal_json(output_file2, format_entries(test_entries))
 
 # Specify input and output files
 input_file1 = 'train_prompts.txt'
