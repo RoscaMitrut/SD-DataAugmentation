@@ -10,7 +10,7 @@ with open(input_file, "r") as f:
         file,prompt = line.split(': ')
 
         text += "{"
-        text += f"\"source\":\"VOCdevkit/VOC2012/SegmentationClass/{file[:4]}.png\" ,\"target\":\"VOCdevkit/VOC2012/JPEGImages/{file}\",\"prompt\":\"{prompt.strip()}\""
+        text += f"\"source\":\"VOCdevkit/VOC2012/SegmentationClass/{file[:-4]}.png\" ,\"target\":\"VOCdevkit/VOC2012/JPEGImages/{file}\",\"prompt\":\"{prompt.strip()}\""
         text += "}\n"
 
 lines = text.splitlines()
