@@ -2,7 +2,7 @@ from PIL import Image
 
 input_file = 'captions.txt'
 output_file = 'prompt.json'
-output_file2 = 'prompt20.json'
+output_file2 = 'prompt_20.json'
 
 text = ""
 
@@ -20,7 +20,7 @@ with open(input_file, "r") as f:
                 if width == 500 and height == 375:
                     # Add entry to JSON-like string
                     text += "{"
-                    text += f"\"source\":\"VOCdevkit/VOC2012/SegmentationClass/{file[:-4]}.png\", \"target\":\"{image_path}\", \"prompt\":\"{prompt.strip()}\""
+                    text += f"\"source\":\"VOCdevkit/VOC2012/SegmentationClass/{file[:-4]}.png\", \"target\":\"VOCdevkit/VOC2012/JPEGImages/{file}\", \"prompt\":\"{prompt.strip()}\""
                     text += "}\n"
         except FileNotFoundError:
             print(f"File not found: {image_path}")
