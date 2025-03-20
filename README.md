@@ -1,7 +1,3 @@
-TODO: 
-- add midas, commands and lightning.ai stuff
-- Make current code files easier to use on untouched datasets
-- Add cityscapes dataset processing code
 # lorem ipsum
 
 ## MIRPR Stable Diffusion Project
